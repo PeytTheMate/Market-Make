@@ -1,0 +1,28 @@
+# Build & tooling
+/build/
+/out/
+/dist/
+/.vscode/
+/.idea/
+/.clangd/
+/compile_commands.json
+*.cache
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+CTestTestfile.cmake
+Testing/
+
+# Binaries
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.dylib

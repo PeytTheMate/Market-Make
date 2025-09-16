@@ -1,0 +1,6 @@
+symbols:
+  - id: "XYZ"
+    tick_size: 1          # integer ticks
+    lot_size: 1
+    fee_per_qty: 0
+    maker_rebate_per_qty: 0

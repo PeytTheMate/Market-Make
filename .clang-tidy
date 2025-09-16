@@ -1,0 +1,13 @@
+Checks: >
+  bugprone-*,
+  performance-*,
+  readability-*,
+  modernize-*,
+  cppcoreguidelines-*,
+  portability-*,
+  misc-*, 
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-pro-bounds-pointer-arithmetic
+WarningsAsErrors: '*'
+HeaderFilterRegex: '^(lib|md|book|oms|risk|acct|strat|sim|research|apps)/'
+FormatStyle: none

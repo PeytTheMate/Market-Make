@@ -1,0 +1,6 @@
+avellaneda_stoikov:
+  gamma: 0.001         # risk aversion
+  sigma: 1.0           # volatility (ticks / sqrt(period))
+  horizon_s: 1.0       # quoting horizon in seconds
+  base_size: 10        # lot size per quote
+  min_spread_ticks: 2  # floor on total spread
