@@ -50,6 +50,9 @@ FetchContent_Declare(natsc
   GIT_REPOSITORY https://github.com/nats-io/nats.c.git
   GIT_TAG        v3.9.2
 )
+# Turn off CTest-driven tests across dependencies
+set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
+
 set(NATS_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(NATS_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 # TLS optional on Day 1 (off keeps OpenSSL out for a simpler first build).
