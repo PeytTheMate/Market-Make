@@ -12,9 +12,14 @@
 #include <nlohmann/json.hpp>
 
 extern "C" {
-#include <nats/nats.h> // C API
+#  if __has_include(<nats/nats.h>)
+#    include <nats/nats.h>
+#  elif __has_include(<nats.h>)
+#    include <nats.h>
+#  else
+#    error "Cannot find NATS headers. Ensure CMake added nats include dirs."
+#  endif
 }
-
 #include "md_tick.hpp"
 
 // fast-cpp-csv-parser (header-only)
