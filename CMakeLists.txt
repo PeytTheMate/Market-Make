@@ -65,15 +65,20 @@ add_executable(csv_pub
   src/csv_pub.cpp
 )
 
-target_include_directories(csv_pub PRIVATE
+target_include_directories(csv_pub 
+ SYSTEM PRIVATE
   ${fastcsv_SOURCE_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
 
   # NATS headers may live in these locations (source tree or the generated include/)
   ${natsc_SOURCE_DIR}/src
   ${natsc_BINARY_DIR}/src
   ${natsc_BINARY_DIR}/include
-  
+)
+
+target_include_directories(csv_pub PRIVATE
+# Own headers remain non SYSTEM to keep signals visible:
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+
 )
 
 target_link_libraries(csv_pub
